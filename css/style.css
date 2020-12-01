@@ -1,0 +1,677 @@
+/****************************************************************
+    # Webkit scrollbar
+****************************************************************/
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to top, #2CBFC7, #46EEAA);
+}
+/****************************************************************
+    # Loader
+****************************************************************/
+.loader {
+    margin: 0 auto;
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    animation: fendi 1s;
+    -webkit-animation: fendi 1s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-more: forwards;
+}
+.main-loader {
+    margin: 15rem auto;
+    display: flex;
+    justify-content: center;
+}
+.dot {
+    border: 5px solid #fff;
+    border-radius: 50px;
+    height: 80px;
+    width: 80px;
+}
+.dot2 {
+    border: 5px solid #46EEAA;
+    border-radius: 50px;
+    height: 80px;
+    width: 80px;
+    margin: -5px;
+    border-left-color: transparent;
+    animation: loading 1s;
+    -webkit-animation: loading 1s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+@keyframes loading {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes loading {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes fendi {
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+@-webkit-keyframes fendi {
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+/****************************************************************
+    # Text Fonts
+****************************************************************/
+@font-face {
+    src: url(../assists/fonts/PoorRichardOpti.otf);
+    font-family: 'poor-richard';
+}
+@font-face {
+    src: url(../assists/fonts/Poppins-Regular.ttf);
+    font-family: 'poppins-regular';
+}
+/****************************************************************
+    # Back to-top button
+****************************************************************/
+.to-top {
+    width: 40px;
+    height: 40px;
+    background: #46EEAA;
+    border-radius: 50px;
+    text-align: center;
+    padding-top: 13px;
+    box-sizing: border-box;
+    position: fixed;
+    right: 10px;
+    line-height: 1;
+    bottom: 10px;
+    color: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+}
+.to-top i {
+    margin-top: -15px;
+    font-size: 20px;
+    color: #fff;
+}
+.to-top.active {
+    bottom: 16px;
+    pointer-events: auto;
+    opacity: 1;
+}
+/****************************************************************
+    # General
+****************************************************************/
+html, body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none !important;
+}
+ul li {
+    list-style: none;
+}
+.fixed {
+    background: linear-gradient(to left, #2CBFC7, #46EEAA);
+    box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.1);
+}
+.title {
+    padding-bottom: 40px;
+}
+.title span {
+    color: #aaa;
+    text-transform: uppercase;
+    font-family: 'poppins-regular';
+    font-size: 14px;
+    padding: 0;
+    margin: 0 0 5px 0;
+    letter-spacing: 1px;
+}
+.title span::after {
+    content: '';
+    width: 100px;
+    height: 1px;
+    background-color: #2CBFC7;
+    display: inline-block;
+    margin: 4px 10px;
+}
+.title h3 {
+    margin: 0;
+    font-size: 36px;
+    font-family: 'poor-richard';
+    font-weight: 600;
+    color: #212529;
+}
+/****************************************************************
+    # Navbar
+****************************************************************/
+nav {
+    overflow: hidden;
+    outline: none;
+    transition: 0.3s all;
+    -webkit-transition: 0.3s all;
+}
+.bg-dark {
+    background-color: transparent !important;
+}
+.navbar-brand {
+    font-size: 25px;
+    margin: 0 15px;
+    font-family: 'poor-richard';
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+nav ul {
+    margin-left: auto;
+    margin-right: 5rem;
+}
+nav ul li {
+    margin: 0 7px;
+}
+nav ul a {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff !important;
+}
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1.5px;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+}
+nav ul li a:hover::after {
+    background-color: #fff;
+    color: #fff;
+    width: 70%;
+}
+/****************************************************************
+    # Home part
+****************************************************************/
+#home {
+    background: linear-gradient(to left, #2CBFC7, #46EEAA) !important;
+    height: 40rem;
+    text-align: center;
+    font-family: 'poor-richard';
+    color: #fff;
+}
+.home-text {
+    padding-top: 12rem;
+}
+#home h1 {
+    font-size: 70px;
+    margin: 0;
+}
+#home h3 {
+    font-size: 35px;
+    margin: 30px 0;
+}
+#home a {
+    background: linear-gradient(to left, #46EEAA, #2CBFC7);
+    padding: 10px 40px;
+    border-radius: 6px;
+    color: #fff;
+    font-family: 'poppins-regular';
+    display: inline-block;
+    margin-top: 15px;
+    border: 1px solid #fff;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+}
+#home a:hover {
+    border: 1px solid #2CBFC7;
+    color: #fff;
+}
+/****************************************************************
+    # About Us
+****************************************************************/
+#about {
+    padding: 5rem 0;
+}
+#about img {
+    width: 100%;
+    border: 7px solid #fff;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+#about .about-img {
+    width: 50%;
+    margin: auto;
+    position: relative;
+}
+#about .about-img::before {
+    content: '';
+    position: absolute;
+    left: -31px;
+    top: -30px;
+    width: 90%;
+    height: 92%;
+    z-index: -1;
+    background-color: #f7fbfe;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+#about .about-img::after {
+    content: '';
+    position: absolute;
+    right: -31px;
+    bottom: -30px;
+    width: 90%;
+    height: 92%;
+    background-color: #f7fbfe;
+    z-index: -1;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+#about img:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+}
+.about-more {
+    font-family: 'poppins-regular';
+}
+.about-more ul {
+    padding: 0;
+}
+.about-more h3 {
+    color: #808080;
+}
+.about-more p {
+    margin: 25px 0 8px;
+}
+.about-more .ul-icon li {
+    margin: 20px 0;
+}
+.about-more i {
+    margin-right: 3px;
+    color: #2CBFC7;
+    font-size: 20px;
+}
+.about-more .ul-check li {
+    margin: 8px 0;
+}
+/****************************************************************
+    # Clints part
+****************************************************************/
+#clints {
+    padding-bottom: 5rem;
+    text-align: center;
+    font-family: 'poppins-regular';
+}
+#clints i {
+    font-size: 24px;
+    background: linear-gradient(to left, #46EEAA, #2CBFC7);
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+#clints .counter {
+    font-size: 36px;
+    color: #2CBFC7;
+}
+/****************************************************************
+    # Services section
+****************************************************************/
+#services {
+    padding: 5rem 0;
+    background-color: #f7fbfe;
+}
+#services .row h2 {
+    padding: 1rem 0 0.5rem;
+    font-size: 1.7rem;
+}
+#services .card {
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    font-family: 'poppins-regular';
+    border: 0;
+    border-radius: 6px;
+    box-shadow: 0 10px 29px 0 rgba(68, 88, 144, .1);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+#services .card:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+}
+#services .card:hover h3 {
+    color: #46EEAA !important;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+#services i {
+    margin: 0 auto 15px auto;
+    color: #3fcdc7;
+    background: #e6fdfc;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+#services .card h3 {
+    margin-bottom: 1rem;
+    font-size: 23px;
+    font-weight: 700;
+    font-family: 'poor-richard';
+}
+#services .card p {
+    font-size: 14px;
+    line-height: 23px;
+    margin-bottom: 0;
+}
+/****************************************************************
+    # Pricing part
+****************************************************************/
+#pricing {
+    padding: 5rem 0;
+}
+#pricing .row {
+    margin-top: 1rem;
+}
+#pricing .card {
+    text-align: center;
+    font-family: 'poppins-regular';
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
+    position: relative;
+    overflow: hidden;
+}
+#pricing .card, #pricing .card .card-header, #pricing .card .card-footer {
+    border: none;
+}
+#pricing .card p {
+    margin: 0;
+    font-size: 18px;
+    color: #aaa;
+}
+#pricing h4 {
+    font-size: 40px;
+    color: #46EEAA;
+}
+#pricing .row span {
+    color: #aaa;
+    font-size: 14px;
+}
+#pricing sup {
+    top: -.8em;
+    font-size: 20px;
+}
+#pricing ul {
+    padding: 0;
+    margin: 0;
+}
+#pricing ul li {
+    margin: 15px 0;
+    font-size: 15px;
+}
+#pricing .un {
+    text-decoration: line-through;
+    color: #aaa;
+}
+#pricing .btn {
+    background: #46EEAA;
+    color: #fff;
+    font-size: 15px;
+    padding: 7px 35px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+}
+#pricing .btn:hover {
+    background: #2CBFC7;
+}
+#pricing .advanced {
+    width: 200px;
+    position: absolute;
+    top: 18px;
+    right: -68px;
+    transform: rotate(45deg);
+    z-index: 1;
+    font-size: 13px;
+    padding: 1px 0 3px 0;
+    background: #1acc8d;
+    color: #fff !important;
+}
+/****************************************************************
+    # Portfolio
+****************************************************************/
+#portfolio {
+    padding: 5rem 0;
+    font-family: 'poppins-regular';
+    background-color: #f7fbfe;
+}
+#portfolio .text-center p {
+    color: #2CBFC7;
+}
+#portfolio .row {
+    margin-top: 4rem;
+}
+#portfolio .about {
+    font-size: 25px;
+    padding: 0 50px;
+    margin: 4rem 0;
+}
+#portfolio img {
+    width: 100%;
+}
+.content {
+    position: relative;
+}
+.content .more, .content::after {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+}
+.content::after {
+    position: absolute;
+    content: '';
+    display: block;
+    background: linear-gradient(to left, #46EEAA, #2CBFC7);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    left: 0;
+}
+.content:hover::after {
+    opacity: 0.93;
+    transform: rotate3d(0, 0, 0, 0deg);
+}
+.content .more {
+    top: 45%;
+    opacity: 0;
+    z-index: 1;
+    transform: translate(10%, -30%);
+    color: #fff;
+}
+.content:hover .more {
+    opacity: 1;
+}
+.content .more a {
+    padding: 7px 15px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 6px;
+    transition: 0.3s all;
+    -webkit-transition: 0.3s all;
+}
+.content .more a:hover {
+    background-color: #fff;
+    color: #46EEAA;
+}
+/****************************************************************
+    # Frequently Asked Questions
+****************************************************************/
+#faq {
+    padding: 5rem 0;
+    background-color: #f7fbfe;
+}
+.accordion .card {
+    border-radius: 0;
+    background: #fff;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 6px;
+    font-family: 'poppins-regular';
+}
+.accordion .card-header {
+    background: none;
+    padding: 15px;
+    border-radius: 0;
+    border-bottom: 0;
+}
+.accordion .card-header .btn {
+    width: 100%;
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+}
+.accordion .card-header .btn:hover {
+    color: #2CBFC7;
+}
+.accordion .card-header i {
+    font-size: 20px;
+    position: absolute;
+    right: 14px;
+    color: #2CBFC7;
+}
+.accordion .card-body {
+    margin-top: -1rem;
+    padding: 15px;
+}
+.accordion .card-body p {
+    margin-bottom: 0;
+}
+/****************************************************************
+    # Contact Us
+****************************************************************/
+#contact {
+    padding: 5rem 0;
+}
+#contact .row {
+    font-family: 'poppins-regular';
+}
+#contact .info {
+    width: 100%;
+}
+#contact .info .email, #contact .info .phone {
+    margin-top: 40px;
+}
+#contact .info i {
+    font-size: 20px;
+    color: #2CBFC7;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #eef7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+#contact .info .address:hover i, #contact .info .email:hover i, #contact .info .phone:hover i {
+    background-color: #2CBFC7;
+    color: #fff;
+}
+#contact .info h4 {
+    padding: 0 0 0 60px;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #333;
+}
+#contact .info p {
+    padding: 0 0 0 60px;
+    font-size: 15px;
+    margin-bottom: 0;
+    color: #728394;
+}
+#contact input, #contact textarea {
+    height: 45px;
+    box-shadow: none;
+    font-size: 14px;
+}
+#contact textarea {
+    height: 100px;
+}
+#contact button {
+    background: linear-gradient(to left, #2CBFC7, #46EEAA);
+    border: 0;
+    padding: 10px 30px;
+    color: #fff;
+    outline: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+}
+/****************************************************************
+    # Footer section
+****************************************************************/
+footer {
+    background: linear-gradient(to left, #2CBFC7, #46EEAA);
+    text-align: center;
+    padding: 3rem 0 10px;
+    font-family: 'poppins-regular';
+}
+footer h3 {
+    color: #fff;
+    font-family: 'poor-richard';
+    margin-bottom: 2rem;
+}
+footer .networks a {
+    margin: 0 10px;
+}
+footer .networks i {
+    width: 44px;
+    height: 44px;
+    color: #fff;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    font-size: 20px;
+    background: linear-gradient(to left, #46EEAA, #2CBFC7 );
+    transition: 0.3s all;
+    -webkit-transition: 0.3s all;
+}
+footer .networks i:hover {
+    background: transparent;
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    color: #fff;
+}
+footer p {
+    margin: 0;
+    font-size: 14px;
+    margin-top: 2rem;
+    color: #444;
+}
+/* End code */
